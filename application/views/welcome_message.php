@@ -7,6 +7,10 @@
 	<title>Document</title>
 </head>
 <body>
-	Hallo
+	<?= form_open('welcome/insert') ?>
+		<input type="text" name="username" placeholder="Username" id="">
+		<input type="password" name="password" placeholder="Password" id="">
+		<input type="submit" name="daftar" value="Daftar" id="">
+	<?= form_close() ?>
 </body>
 </html>
