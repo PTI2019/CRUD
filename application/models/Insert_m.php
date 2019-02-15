@@ -17,6 +17,10 @@ class Insert_m extends CI_Model {
         return $this->db->delete($table);
     }
 
+    function edit($table, $data) {
+        return $this->db->update($table, $data);
+    }
+
 }
 
 /* End of file ModelName.php */

@@ -37,4 +37,23 @@ class Welcome extends CI_Controller {
 			echo "gagal";
 		}
 	}
+
+	public function menuedit(){
+		$this->load->view('edit');
+	}
+
+	public function edit(){
+		$this->load->model('insert_m');
+		$data = array(
+			'username' => $this->input->post('username'),
+			'password' => $this->input->post('password'),
+			'id_role' => 2
+		);
+		if($this->insert_m->edit('user',$data)) {
+			redirect('welcome');
+			exit;
+		} else {
+			echo "gagal";
+		}
+	}
 }
