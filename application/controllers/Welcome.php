@@ -27,4 +27,14 @@ class Welcome extends CI_Controller {
 			echo "gagal";
 		}
 	}
+
+	public function del($id) {
+		$this->load->model('insert_m');
+		if($this->insert_m->del('user', $id)) {
+			redirect('welcome');
+			exit;
+		} else {
+			echo "gagal";
+		}
+	}
 }

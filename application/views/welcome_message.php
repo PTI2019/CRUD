@@ -18,12 +18,16 @@
 			<td>Username</td>
 			<td>Password</td>
 			<td>Id Role</td>
+			<td>Opsi</td>
 		</tr>
 		<?php foreach ($data_username as $k) { ?>
 		<tr>
 			<td><?= $k->username ?></td>
 			<td><?= $k->password ?></td>
 			<td><?= $k->id_role ?></td>
+			<td>
+				<a href="<?= site_url('welcome/del/'.$k->username) ?>">Hapus</a>
+			</td>
 		</tr>
 		<?php } ?>
 	</table>

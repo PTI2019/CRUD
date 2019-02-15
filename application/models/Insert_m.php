@@ -12,6 +12,11 @@ class Insert_m extends CI_Model {
         return $query->result();
     }
 
+    function del($table, $id) {
+        $this->db->where(array('username' => $id));
+        return $this->db->delete($table);
+    }
+
 }
 
 /* End of file ModelName.php */
