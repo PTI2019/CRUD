@@ -27,6 +27,7 @@
 			<td><?= $k->id_role ?></td>
 			<td>
 				<a href="<?= site_url('welcome/del/'.$k->username) ?>">Hapus</a>
+				<a href="<?= site_url('welcome/edit/'.$k->username) ?>">Edit</a>
 			</td>
 		</tr>
 		<?php } ?>
