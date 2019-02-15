@@ -7,6 +7,11 @@ class Insert_m extends CI_Model {
         return $this->db->insert($table, $data);
     }
 
+    function get($table) {
+        $query = $this->db->get($table);
+        return $query->result();
+    }
+
 }
 
 /* End of file ModelName.php */

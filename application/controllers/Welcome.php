@@ -5,7 +5,11 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->model('insert_m');
+		$arr = array(
+			'data_username' => $this->insert_m->get('user')
+		);
+		$this->load->view('welcome_message', $arr);
 	}
 
 	public function insert()

@@ -12,5 +12,20 @@
 		<input type="password" name="password" placeholder="Password" id="">
 		<input type="submit" name="daftar" value="Daftar" id="">
 	<?= form_close() ?>
+
+	<table style="margin-top:25px;">
+		<tr>
+			<td>Username</td>
+			<td>Password</td>
+			<td>Id Role</td>
+		</tr>
+		<?php foreach ($data_username as $k) { ?>
+		<tr>
+			<td><?= $k->username ?></td>
+			<td><?= $k->password ?></td>
+			<td><?= $k->id_role ?></td>
+		</tr>
+		<?php } ?>
+	</table>
 </body>
 </html>
